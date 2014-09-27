@@ -22,10 +22,3 @@ function playSong() {
     };
     req.send(null);
 }
-
-function stop() {
-    if (audio) {
-        audio.pause();
-        audio = null;
-    }
-}
