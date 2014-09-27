@@ -1,11 +1,10 @@
 var audio = null;
 document.getElementById("submit").addEventListener("click", playSong);
+
+// barely modified from one of Spotify's web api code examples: https://developer.spotify.com/web-api/code-examples/
 function playSong() {
     song = document.getElementById("song").value
     artist = document.getElementById("artist").value
-    // var recognizedElement = document.getElementById('recognized');
-    // recognizedElement.innerText = 'Recognized "' + song + (artist ? ' by ' + artist : '') + '"';
-    // console.log("PlaySong", song);
     var req = new XMLHttpRequest();
     req.open('GET', 'https://api.spotify.com/v1/search?type=track&q=' + encodeURIComponent(song), true);
 
