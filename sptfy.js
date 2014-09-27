@@ -12,7 +12,7 @@ function playSong() {
             var data = JSON.parse(req.responseText);
             if (data.tracks.items[0]) {
                 stop();
-                var matchedElement = document.getElementById('matched');
+                var matchedElement = document.getElementById('song');
                 matchedElement.innerHTML = '<div class="media"><img src="' + data.tracks.items[0].album.images[0].url + '" alt="Cover art of ' + data.tracks.items[0].album.name + '" width="300"><p>Playing ' + data.tracks.items[0].name + ' by ' + data.tracks.items[0].artists[0].name +'</p></div>';
                 audio = new Audio(data.tracks.items[0].preview_url);
                 audio.play();
